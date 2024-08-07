@@ -2,25 +2,20 @@
 
 require_once('../Models/Estudiante.php');
 
-class EstudianteValidator{
+class EstudianteValidator
+{
 
-    public static function validateEmptyFields(Estudiante $estudiante){
+    public static function validateEmptyFields($carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion)
+    {
 
-        if(
-            $estudiante->carnet == "" ||
-            $estudiante->nombres == "" ||
-            $estudiante->apellidos == "" ||
-            $estudiante->fecha_nacimiento = "" ||
-            $estudiante->email = "" ||
-            $estudiante->telefono = "" ||
-            $estudiante->direccion            
-            ){
-            return true;
+        $fields = [$carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion];
+
+        foreach ($fields as $field) {
+            if (empty($field)) {
+                return false;
+            }
         }
 
-        return false;
-
+        return true;
     }
-
 }
-

@@ -12,5 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = $_POST['telefono'];
     $direccion = $_POST['direccion'];
 
-    EstudianteController::guardarEstudiante($carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion);
+    if (EstudianteValidator::validateEmptyFields($carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion)) {
+
+        EstudianteController::guardarEstudiante($carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion);
+    } else {
+        header('Location: ../Views/registroVacio.php');
+    }
 }

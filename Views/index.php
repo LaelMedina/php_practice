@@ -9,13 +9,17 @@
 </head>
 
 <body>
+
     <div id="container">
+
         <header>
             <h1 class="title">Registro de estudiantes</h1>
         </header>
+        
         <form action="registro.php">
             <input type="submit" value="Nuevo">
         </form>
+        
         <table id="content-table">
             <thead>
                 <tr>
@@ -39,7 +43,8 @@
                 ?>
             </tbody>
         </table>
+    
     </div>
-</body>
 
+</body>
 </html>
