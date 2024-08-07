@@ -16,12 +16,11 @@
             <h1 class="title">Bienvenido</h1>
             <?php
             require_once('../Controllers/estudianteController.php');
-            $controller = new estudianteController();
-            $estudiantes = $controller->index();
+            $estudiantes = EstudianteController::index();
 
-            echo '<h3>:Carnet</h3> ' . $estudiantes[count($estudiantes) - 1]['carnet'] .'<br><br>';
-            echo '<h3>Nombres:</h3> ' . $estudiantes[count($estudiantes) - 1]['nombres'] .'<br><br>';
-            echo '<h3>Apellidos:</h3> ' . $estudiantes[count($estudiantes) - 1]['apellidos'] .'<br><br>';
+            echo '<h3>Carnet: </h3> ' . $estudiantes[count($estudiantes) - 1]['carnet'] .'<br><br>';
+            echo '<h3>Nombres: </h3> ' . $estudiantes[count($estudiantes) - 1]['nombres'] .'<br><br>';
+            echo '<h3>Apellidos: </h3> ' . $estudiantes[count($estudiantes) - 1]['apellidos'] .'<br><br>';
             ?>
         </header>
 

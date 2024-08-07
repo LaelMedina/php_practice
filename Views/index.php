@@ -27,8 +27,7 @@
             <tbody>
                 <?php
                 require_once('../Controllers/estudianteController.php');
-                $controller = new EstudianteController();
-                $estudiantes = $controller->index();
+                $estudiantes = EstudianteController::index();
 
                 foreach ($estudiantes as $estudiante) {
                     echo "<tr>
