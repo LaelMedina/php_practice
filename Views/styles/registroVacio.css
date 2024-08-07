@@ -1,52 +1,50 @@
-/* Asegúrate de ajustar el camino del archivo CSS según tu estructura de proyecto */
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
 }
 
 #container {
-    text-align: center;
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
+  text-align: center;
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
 }
 
 header {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .title {
-    font-size: 2em;
-    color: #333;
+  font-size: 2em;
+  color: #333;
 }
 
 .message {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 2em;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 2em;
 }
 
 .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #065db9;
+  background-color: #065db9;
 }
