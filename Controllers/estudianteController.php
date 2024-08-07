@@ -5,7 +5,7 @@ require_once '../Models/Conexion.php';
 class EstudianteController
 {
     private static $db;
-    private $tableName = 'estudiantes';
+    private static $tableName = 'estudiantes';
 
     public function __construct()
     {
@@ -23,7 +23,7 @@ class EstudianteController
     {
         self::initDB();
 
-        $estudiantes = self::$db->select('estudiantes');
+        $estudiantes = self::$db->select(self::$tableName);
 
         return $estudiantes;
     }
@@ -33,7 +33,7 @@ class EstudianteController
 
         self::initDB();
 
-        $query = "INSERT INTO estudiantes (carnet, nombres, apellidos, fecha_nacimiento, email, telefono, direccion)
+        $query = "INSERT INTO " . self::$tableName . "(carnet, nombres, apellidos, fecha_nacimiento, email, telefono, direccion)
                   VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         $consulta = self::$db->prepare($query);
