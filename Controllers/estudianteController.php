@@ -39,12 +39,5 @@ class EstudianteController
         $consulta = self::$db->prepare($query);
 
         $consulta->bind_param('sssssss', $carnet, $nombres, $apellidos, $fecha_nacimiento, $email, $telefono, $direccion);
-
-        if ($consulta->execute()) {
-            // echo "Estudiante guardado exitosamente.";
-            header('Location: ../Views/bienvenido.php');
-        } else {
-            echo "Error: " . $consulta->error;
-        }
     }
 }
