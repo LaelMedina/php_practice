@@ -16,7 +16,7 @@
             <h1 class="title">Registro de estudiantes</h1>
         </header>
 
-        <form action="../Store/guardar.php" method="post" class="form-group">
+        <form id="registroForm" method="post" class="form-group" onsubmit="enviarFormulario(event)">
             <label for="carnet">Carnet</label>
             <input type="text" id="carnet" name="carnet" maxlength="10">
 
@@ -39,12 +39,13 @@
             <input type="text" id="direccion" name="direccion">
 
             <div>
-                <input type="submit" value="Guardar" onclick="window.location.href='bienvenido.php'">
+                <input type="submit" value="Guardar">
                 <input type="button" value="Cancelar" onclick="if (confirm('¿Estás seguro de que quieres cancelar?')) window.location.href='index.php';">
             </div>
         </form>
     </div>
 
+    <script src="../js/sendForm.js"></script>
 </body>
 
 </html>
